@@ -1,0 +1,965 @@
+{% extends "mainapp/base.html" %}
+{% load static %}
+
+{% block content %}
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section id="home" class="hero-section">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center min-vh-100 py-5">
+
+        <!-- Left -->
+        <div class="col-lg-6 hero-text" data-reveal="left">
+          <p class="hero-greeting"><span class="accent">Hello,</span> <span class="wave">&#128075;</span></p>
+          <h1 class="hero-name">We Are <span class="accent-name">Sergio &amp; Eder.</span></h1>
+          <h2 class="hero-title">Fullstack <span class="teal-text">Developers</span></h2>
+          <p class="hero-description">
+            We are <strong>two freelance developers from Colombia</strong> with extensive experience
+            building tech solutions for companies — from high-converting landing pages to robust APIs,
+            full e-commerce platforms and cloud automation. Independent, hands-on, and 100% remote
+            for clients worldwide.
+          </p>
+          <div class="hero-actions">
+            <a href="#contact" class="btn btn-primary-custom me-3">
+              Hire Us <i class="bi bi-arrow-right ms-1"></i>
+            </a>
+            <a href="#portfolio" class="btn btn-outline-custom">View Work</a>
+          </div>
+        </div>
+
+        <!-- Right — photo + floating icons -->
+        <div class="col-lg-6 hero-visual d-flex justify-content-center mt-5 mt-lg-0" data-reveal="right">
+          <div class="hero-photo-wrapper">
+            <div class="photo-ring"></div>
+            <div class="hero-photo-circle">
+              <img src="{% static 'mainapp/img/sergio_main.jpg' %}" alt="Sergio Rueda & Eder Acuña" class="hero-photo-img">
+            </div>
+            <!-- Floating tech icons -->
+            <div class="floating-icon fi-python">
+              <i class="bi bi-filetype-py"></i>
+              <span>Python</span>
+            </div>
+            <div class="floating-icon fi-react">
+              <i class="bi bi-display"></i>
+              <span>React</span>
+            </div>
+            <div class="floating-icon fi-django">
+              <i class="bi bi-server"></i>
+              <span>Django</span>
+            </div>
+            <div class="floating-icon fi-aws">
+              <i class="bi bi-cloud-fill"></i>
+              <span>AWS</span>
+            </div>
+            <!-- Badge -->
+            <div class="hero-badge">
+              <i class="bi bi-patch-check-fill badge-icon"></i>
+              <div class="badge-content">
+                <span class="badge-number">30+</span>
+                <span class="badge-label">Complete Projects</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <a href="#stats" class="scroll-hint">
+      <i class="bi bi-chevron-double-down"></i>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       STATS BAR
+  ============================================================ -->
+  <section id="stats" class="stats-section">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-6 col-md-3" data-reveal="up">
+          <div class="stat-item">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-count="11">0</span><span class="stat-suffix">+</span>
+            </div>
+            <p class="stat-label">Years Experience</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-reveal="up" data-delay="100">
+          <div class="stat-item">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-count="30">0</span><span class="stat-suffix">+</span>
+            </div>
+            <p class="stat-label">Projects Completed</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-reveal="up" data-delay="200">
+          <div class="stat-item">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-count="100">0</span><span class="stat-suffix">%</span>
+            </div>
+            <p class="stat-label">Client Satisfaction</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-reveal="up" data-delay="300">
+          <div class="stat-item">
+            <div class="stat-number-wrap">
+              <span class="stat-number" data-count="16">0</span><span class="stat-suffix">+</span>
+            </div>
+            <p class="stat-label">Landing Pages Built</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ABOUT
+  ============================================================ -->
+  <section id="about" class="about-section section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+
+        <!-- Photo -->
+        <div class="col-lg-5" data-reveal="left">
+          <div class="about-photo-wrapper">
+            <div class="about-photo-frame">
+              <img src="{% static 'mainapp/img/settup.jpg' %}" alt="Our development setup" class="about-photo-img">
+            </div>
+            <div class="about-exp-badge">
+              <span class="aeb-num">11+</span>
+              <span class="aeb-text">Years of<br>Experience</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <div class="col-lg-7" data-reveal="right">
+          <p class="section-tag">About Us</p>
+          <h2 class="section-title">Our <span class="accent">Advantage</span></h2>
+          <p class="about-description">
+            We are <strong>Sergio Rueda</strong> and <strong>Eder Acuña</strong>, two
+            <strong>freelance fullstack developers from Colombia</strong> with extensive hands-on
+            experience delivering tech solutions for companies of every size. As an independent duo
+            we move fast, communicate directly, and ship software that drives real business results
+            — no agencies, no middlemen. We specialize in Python/Django backends, React frontends,
+            RESTful APIs and AWS cloud deployments, working 100% remote with clients across the
+            United States and worldwide.
+          </p>
+          <p class="about-description">
+            From high-converting landing pages to complex e-commerce platforms with integrated payment
+            gateways (Stripe, PayPal, Square), we bring both technical depth and a business-focused
+            mindset to every project — two freelancers, one mission: shipping software that works.
+          </p>
+          <!-- Skill Bars -->
+          <div class="skill-bars mt-4">
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">Python</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">Django / DRF</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">React / Next.js</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">AWS / Cloud</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">Node.js / Express</span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-header">
+                <span class="skill-name">PostgreSQL / MySQL</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SERVICES
+  ============================================================ -->
+  <section id="services" class="services-section section-padding">
+    <div class="container">
+      <div class="text-center mb-5" data-reveal="up">
+        <p class="section-tag">What We Do</p>
+        <h2 class="section-title">Popular <span class="accent">Services</span></h2>
+        <p class="section-subtitle">End-to-end tech solutions tailored to your company's business goals.</p>
+      </div>
+
+      <ul class="nav services-tabs justify-content-center mb-5" id="servicesTabs" role="tablist" data-reveal="up">
+        <li class="nav-item" role="presentation">
+          <button class="services-tab-btn active" id="dev-tab" data-bs-toggle="tab"
+            data-bs-target="#dev" type="button" role="tab">
+            <i class="bi bi-code-slash me-2"></i>Development
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="services-tab-btn" id="design-tab" data-bs-toggle="tab"
+            data-bs-target="#design" type="button" role="tab">
+            <i class="bi bi-palette me-2"></i>Design
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="services-tab-btn" id="integration-tab" data-bs-toggle="tab"
+            data-bs-target="#integration" type="button" role="tab">
+            <i class="bi bi-plug me-2"></i>Integration
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="services-tab-btn" id="ai-tab" data-bs-toggle="tab"
+            data-bs-target="#ai" type="button" role="tab">
+            <i class="bi bi-robot me-2"></i>Artificial Intelligence
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="servicesTabContent">
+
+        <!-- Development -->
+        <div class="tab-pane fade show active" id="dev" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-4" data-reveal="up">
+              <div class="service-card">
+                <div class="service-icon-wrap green-glow">
+                  <i class="bi bi-window-fullscreen"></i>
+                </div>
+                <h4 class="service-card-title">Landing Pages</h4>
+                <p class="service-card-text">High-converting landing pages designed to turn visitors into customers. SEO-optimized, mobile-first, and lightning fast.</p>
+                <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4" data-reveal="up" data-delay="100">
+              <div class="service-card">
+                <div class="service-icon-wrap teal-glow">
+                  <i class="bi bi-cart4"></i>
+                </div>
+                <h4 class="service-card-title">E-commerce Stores</h4>
+                <p class="service-card-text">Full-featured online stores with product management, cart, checkout, and integrated payment gateways like Stripe and PayPal.</p>
+                <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4" data-reveal="up" data-delay="200">
+              <div class="service-card">
+                <div class="service-icon-wrap purple-glow">
+                  <i class="bi bi-building"></i>
+                </div>
+                <h4 class="service-card-title">Corporate Websites</h4>
+                <p class="service-card-text">Professional multi-page websites for businesses with CMS, blog, team pages, and contact forms that convert.</p>
+                <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Design -->
+        <div class="tab-pane fade" id="design" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-4" data-reveal="up">
+              <div class="service-card">
+                <div class="service-icon-wrap green-glow">
+                  <i class="bi bi-layout-wtf"></i>
+                </div>
+                <h4 class="service-card-title">UI/UX Design</h4>
+                <p class="service-card-text">Intuitive interfaces built on solid UX principles. Clean, modern aesthetics that guide users toward your conversion goals.</p>
+                <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4" data-reveal="up" data-delay="100">
+              <div class="service-card">
+                <div class="service-icon-wrap teal-glow">
+                  <i class="bi bi-phone"></i>
+                </div>
+                <h4 class="service-card-title">Responsive Design</h4>
+                <p class="service-card-text">Every pixel adapts perfectly — from large monitors to the smallest smartphone screens. Mobile-first, always.</p>
+                <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4" data-reveal="up" data-delay="200">
+              <div class="service-card">
+                <div class="service-icon-wrap purple-glow">
+                  <i class="bi bi-speedometer2"></i>
+                </div>
+                <h4 class="service-card-title">Performance Optimization</h4>
+                <p class="service-card-text">Core Web Vitals tuning, image optimization, caching strategies, and CDN setup to make your site blazing fast.</p>
+                <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Integration -->
+        <div class="tab-pane fade" id="integration" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-4" data-reveal="up">
+              <div class="service-card">
+                <div class="service-icon-wrap green-glow">
+                  <i class="bi bi-hdd-network"></i>
+                </div>
+                <h4 class="service-card-title">REST API Development</h4>
+                <p class="service-card-text">Scalable, well-documented REST APIs built with Django REST Framework or Node.js — ready for web, mobile, and third-party use.</p>
+                <a href="{% url 'mainapp:api_services' %}" class="service-link">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4" data-reveal="up" data-delay="100">
+              <div class="service-card">
+                <div class="service-icon-wrap teal-glow">
+                  <i class="bi bi-credit-card-2-front"></i>
+                </div>
+                <h4 class="service-card-title">Payment Gateways</h4>
+                <p class="service-card-text">Stripe, PayPal, and Square integration — secure, PCI-compliant payment flows tailored for the US market and beyond.</p>
+                <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4" data-reveal="up" data-delay="200">
+              <div class="service-card">
+                <div class="service-icon-wrap purple-glow">
+                  <i class="bi bi-cloud-arrow-up"></i>
+                </div>
+                <h4 class="service-card-title">Cloud Deployment</h4>
+                <p class="service-card-text">EC2, RDS, S3, CloudFront — production-grade AWS infrastructure with CI/CD pipelines, SSL, and auto-scaling.</p>
+                <a href="#contact" class="service-link">Get Started <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Artificial Intelligence -->
+        <div class="tab-pane fade" id="ai" role="tabpanel">
+          <div class="row g-4">
+            <div class="col-md-4" data-reveal="up">
+              <div class="service-card">
+                <div class="service-icon-wrap green-glow">
+                  <i class="bi bi-chat-dots"></i>
+                </div>
+                <h4 class="service-card-title">AI Bots</h4>
+                <p class="service-card-text">Custom chatbots and virtual assistants powered by LLMs — integrated into your website, WhatsApp, Slack, or any platform your customers use.</p>
+                <a href="{% url 'mainapp:software_ai_services' %}" class="service-link">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4" data-reveal="up" data-delay="100">
+              <div class="service-card">
+                <div class="service-icon-wrap teal-glow">
+                  <i class="bi bi-diagram-3"></i>
+                </div>
+                <h4 class="service-card-title">AI Flows</h4>
+                <p class="service-card-text">Intelligent workflows that connect your tools and data sources — from lead qualification to content generation, all orchestrated with AI agents.</p>
+                <a href="{% url 'mainapp:software_ai_services' %}" class="service-link">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+            <div class="col-md-4" data-reveal="up" data-delay="200">
+              <div class="service-card">
+                <div class="service-icon-wrap purple-glow">
+                  <i class="bi bi-gear-wide-connected"></i>
+                </div>
+                <h4 class="service-card-title">Automation</h4>
+                <p class="service-card-text">End-to-end process automation with AI — emails, data entry, reporting, and repetitive tasks eliminated so your team can focus on what matters.</p>
+                <a href="{% url 'mainapp:software_ai_services' %}" class="service-link">Learn more <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PRICING
+  ============================================================ -->
+  <section id="pricing" class="pricing-section section-padding">
+    <div class="container">
+      <div class="text-center mb-5" data-reveal="up">
+        <p class="section-tag">Investment</p>
+        <h2 class="section-title">Pricing <span class="accent">Plans</span></h2>
+        <p class="section-subtitle">Transparent, fair pricing for quality work. All prices in USD.</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- Landing Page -->
+        <div class="col-lg-3 col-md-6" data-reveal="left">
+          <div class="pricing-card pricing-highlighted pricing-teal">
+            <div class="pricing-badge-label">Best Value</div>
+            <div class="pricing-icon-wrap">
+              <i class="bi bi-window-fullscreen"></i>
+            </div>
+            <h4 class="pricing-plan-name">Landing Page</h4>
+            <div class="pricing-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">390</span>
+              <span class="price-period">USD / project</span>
+            </div>
+            <p class="pricing-tagline">Perfect for businesses that need a professional online presence fast.</p>
+            <ul class="pricing-features">
+              <li><i class="bi bi-check-circle-fill"></i>Responsive design (mobile + desktop)</li>
+              <li><i class="bi bi-check-circle-fill"></i>WhatsApp floating button</li>
+              <li><i class="bi bi-check-circle-fill"></i>On-page SEO optimization</li>
+              <li><i class="bi bi-check-circle-fill"></i>Google Analytics setup</li>
+              <li><i class="bi bi-check-circle-fill"></i>Contact / lead capture form</li>
+              <li><i class="bi bi-check-circle-fill"></i>SSL certificate</li>
+              <li><i class="bi bi-check-circle-fill"></i>1 month free support</li>
+              <li class="disabled"><i class="bi bi-x-circle"></i>Blog / CMS</li>
+              <li class="disabled"><i class="bi bi-x-circle"></i>Payment gateway</li>
+            </ul>
+            <a href="#contact" class="btn pricing-btn">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Corporate — Recommended -->
+        <div class="col-lg-3 col-md-6" data-reveal="up">
+          <div class="pricing-card pricing-highlighted pricing-green">
+            <div class="pricing-badge-label">Recommended</div>
+            <div class="pricing-icon-wrap">
+              <i class="bi bi-building"></i>
+            </div>
+            <h4 class="pricing-plan-name">Corporate Website</h4>
+            <div class="pricing-price">
+              <span class="price-amount-custom">Custom Quote</span>
+            </div>
+            <p class="pricing-tagline">Multi-page solution built around your brand and business objectives.</p>
+            <ul class="pricing-features">
+              <li><i class="bi bi-check-circle-fill"></i>Up to 10 custom pages</li>
+              <li><i class="bi bi-check-circle-fill"></i>CMS (easy content editing)</li>
+              <li><i class="bi bi-check-circle-fill"></i>Blog module</li>
+              <li><i class="bi bi-check-circle-fill"></i>Team &amp; services pages</li>
+              <li><i class="bi bi-check-circle-fill"></i>Advanced SEO + sitemap</li>
+              <li><i class="bi bi-check-circle-fill"></i>SSL + domain configuration</li>
+              <li><i class="bi bi-check-circle-fill"></i>3 months free support</li>
+              <li><i class="bi bi-check-circle-fill"></i>Performance optimization</li>
+              <li><i class="bi bi-check-circle-fill"></i>AWS / cloud deployment</li>
+            </ul>
+            <a href="#contact" class="btn pricing-btn">Get a Quote</a>
+          </div>
+        </div>
+
+        <!-- E-commerce -->
+        <div class="col-lg-3 col-md-6" data-reveal="right">
+          <div class="pricing-card pricing-highlighted pricing-purple">
+            <div class="pricing-badge-label">Full Package</div>
+            <div class="pricing-icon-wrap">
+              <i class="bi bi-cart4"></i>
+            </div>
+            <h4 class="pricing-plan-name">E-commerce Store</h4>
+            <div class="pricing-price">
+              <span class="price-currency">$</span>
+              <span class="price-amount">1,290</span>
+              <span class="price-period">USD / project</span>
+            </div>
+            <p class="pricing-tagline">Full-featured online store ready to accept payments from day one.</p>
+            <ul class="pricing-features">
+              <li><i class="bi bi-check-circle-fill"></i>Unlimited products</li>
+              <li><i class="bi bi-check-circle-fill"></i>Stripe / PayPal / Square</li>
+              <li><i class="bi bi-check-circle-fill"></i>Inventory management</li>
+              <li><i class="bi bi-check-circle-fill"></i>Order tracking dashboard</li>
+              <li><i class="bi bi-check-circle-fill"></i>Customer accounts &amp; login</li>
+              <li><i class="bi bi-check-circle-fill"></i>Product reviews &amp; ratings</li>
+              <li><i class="bi bi-check-circle-fill"></i>Discount &amp; coupon system</li>
+              <li><i class="bi bi-check-circle-fill"></i>3 months free support</li>
+              <li><i class="bi bi-check-circle-fill"></i>AWS deployment</li>
+            </ul>
+            <a href="#contact" class="btn pricing-btn">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Custom Software -->
+        <div class="col-lg-3 col-md-6" data-reveal="right" data-delay="100">
+          <div class="pricing-card pricing-highlighted pricing-cyan">
+            <div class="pricing-badge-label">Enterprise</div>
+            <div class="pricing-icon-wrap">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <h4 class="pricing-plan-name">Custom Software</h4>
+            <div class="pricing-price">
+              <span class="price-amount-custom">Custom Quote</span>
+            </div>
+            <p class="pricing-tagline">Tailor-made software solutions designed to solve your unique business challenges.</p>
+            <ul class="pricing-features">
+              <li><i class="bi bi-check-circle-fill"></i>Requirements analysis</li>
+              <li><i class="bi bi-check-circle-fill"></i>Custom architecture design</li>
+              <li><i class="bi bi-check-circle-fill"></i>Full-stack development</li>
+              <li><i class="bi bi-check-circle-fill"></i>Database design &amp; optimization</li>
+              <li><i class="bi bi-check-circle-fill"></i>REST / GraphQL APIs</li>
+              <li><i class="bi bi-check-circle-fill"></i>Third-party integrations</li>
+              <li><i class="bi bi-check-circle-fill"></i>Testing &amp; QA</li>
+              <li><i class="bi bi-check-circle-fill"></i>Cloud deployment &amp; CI/CD</li>
+              <li><i class="bi bi-check-circle-fill"></i>Ongoing maintenance plan</li>
+            </ul>
+            <a href="{% url 'mainapp:software_ai_services' %}" class="btn pricing-btn">Get a Quote</a>
+          </div>
+        </div>
+
+      </div>
+
+      <p class="pricing-note text-center mt-4" data-reveal="up">
+        <i class="bi bi-info-circle me-1 teal-text"></i>
+        All prices are starting points. Final quote depends on scope and requirements.
+        <a href="#contact" class="accent">Let's talk →</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       WORK EXPERIENCE
+  ============================================================ -->
+  <section id="experience" class="experience-section section-padding">
+    <div class="code-bg" aria-hidden="true">
+      <pre class="code-lines"><code><span class="cm">// === server.js ===</span>
+<span>const</span> express = require(<span class="str">'express'</span>);
+<span>const</span> app = express();
+
+<span class="cm"># serializers.py</span>
+<span>from</span> rest_framework <span>import</span> serializers
+<span>class</span> UserSerializer(serializers.ModelSerializer):
+    <span>class</span> Meta:
+        model = User
+        fields = [<span class="str">'id'</span>, <span class="str">'name'</span>, <span class="str">'email'</span>]
+
+<span class="cm">// App.jsx</span>
+<span>import</span> React, { useState, useEffect } <span>from</span> <span class="str">'react'</span>;
+<span>const</span> [projects, setProjects] = useState([]);
+<span>useEffect</span>(() => {
+    fetchProjects().then(setProjects);
+}, []);
+
+<span class="cm"># deploy.py</span>
+<span>def</span> deploy_to_aws(config):
+    client = boto3.client(<span class="str">'ecs'</span>)
+    <span>return</span> client.run_task(**config)
+
+<span class="cm">// routes/api.js</span>
+app.get(<span class="str">'/api/users'</span>, <span>async</span> (req, res) => {
+    <span>const</span> users = <span>await</span> db.query(<span class="str">'SELECT * FROM users'</span>);
+    res.json({ data: users });
+});
+
+<span class="cm">/* queries.sql */</span>
+<span>SELECT</span> p.name, COUNT(o.id) <span>AS</span> total
+<span>FROM</span> products p <span>JOIN</span> orders o <span>ON</span> p.id = o.product_id
+<span>GROUP BY</span> p.name <span>ORDER BY</span> total <span>DESC</span>;
+
+<span class="cm"># views.py</span>
+<span>class</span> PaymentGateway:
+    <span>def</span> process(self, amount):
+        <span>return</span> stripe.Charge.create(
+            amount=amount,
+            currency=<span class="str">'usd'</span>
+        )
+
+<span class="cm">// middleware/auth.js</span>
+<span>const</span> verifyToken = (req, res, next) => {
+    <span>const</span> token = req.headers[<span class="str">'authorization'</span>];
+    <span>if</span> (!token) <span>return</span> res.status(401).send();
+    jwt.verify(token, SECRET, next);
+};
+
+<span class="cm"># models.py</span>
+<span>class</span> Project(models.Model):
+    name = models.CharField(max_length=200)
+    tech_stack = models.JSONField(default=list)
+    deployed = models.BooleanField(default=<span>False</span>)
+
+<span class="cm">// hooks/useApi.ts</span>
+<span>export function</span> useApi&lt;T&gt;(url: string) {
+    <span>const</span> [data, setData] = useState&lt;T | null&gt;(null);
+    <span>const</span> [loading, setLoading] = useState(<span>true</span>);
+    <span>return</span> { data, loading };
+}
+
+<span class="cm"># settings.py</span>
+DATABASES = {
+    <span class="str">'default'</span>: {
+        <span class="str">'ENGINE'</span>: <span class="str">'django.db.backends.postgresql'</span>,
+        <span class="str">'NAME'</span>: os.environ.get(<span class="str">'DB_NAME'</span>),
+    }
+}
+
+<span class="cm">// docker-compose.yml</span>
+services:
+  web:
+    build: .
+    ports:
+      - <span class="str">"8000:8000"</span>
+    depends_on:
+      - db
+      - redis
+
+<span class="cm">// === server.js ===</span>
+<span>const</span> express = require(<span class="str">'express'</span>);
+<span>const</span> app = express();
+
+<span class="cm"># serializers.py</span>
+<span>from</span> rest_framework <span>import</span> serializers
+<span>class</span> UserSerializer(serializers.ModelSerializer):
+    <span>class</span> Meta:
+        model = User
+        fields = [<span class="str">'id'</span>, <span class="str">'name'</span>, <span class="str">'email'</span>]
+
+<span class="cm">// App.jsx</span>
+<span>import</span> React, { useState, useEffect } <span>from</span> <span class="str">'react'</span>;
+<span>const</span> [projects, setProjects] = useState([]);
+<span>useEffect</span>(() => {
+    fetchProjects().then(setProjects);
+}, []);
+
+<span class="cm"># deploy.py</span>
+<span>def</span> deploy_to_aws(config):
+    client = boto3.client(<span class="str">'ecs'</span>)
+    <span>return</span> client.run_task(**config)
+
+<span class="cm">// routes/api.js</span>
+app.get(<span class="str">'/api/users'</span>, <span>async</span> (req, res) => {
+    <span>const</span> users = <span>await</span> db.query(<span class="str">'SELECT * FROM users'</span>);
+    res.json({ data: users });
+});
+
+<span class="cm">/* queries.sql */</span>
+<span>SELECT</span> p.name, COUNT(o.id) <span>AS</span> total
+<span>FROM</span> products p <span>JOIN</span> orders o <span>ON</span> p.id = o.product_id
+<span>GROUP BY</span> p.name <span>ORDER BY</span> total <span>DESC</span>;
+
+<span class="cm"># views.py</span>
+<span>class</span> PaymentGateway:
+    <span>def</span> process(self, amount):
+        <span>return</span> stripe.Charge.create(
+            amount=amount,
+            currency=<span class="str">'usd'</span>
+        )
+
+<span class="cm">// middleware/auth.js</span>
+<span>const</span> verifyToken = (req, res, next) => {
+    <span>const</span> token = req.headers[<span class="str">'authorization'</span>];
+    <span>if</span> (!token) <span>return</span> res.status(401).send();
+    jwt.verify(token, SECRET, next);
+};
+
+<span class="cm"># models.py</span>
+<span>class</span> Project(models.Model):
+    name = models.CharField(max_length=200)
+    tech_stack = models.JSONField(default=list)
+    deployed = models.BooleanField(default=<span>False</span>)
+
+<span class="cm">// hooks/useApi.ts</span>
+<span>export function</span> useApi&lt;T&gt;(url: string) {
+    <span>const</span> [data, setData] = useState&lt;T | null&gt;(null);
+    <span>const</span> [loading, setLoading] = useState(<span>true</span>);
+    <span>return</span> { data, loading };
+}
+
+<span class="cm"># settings.py</span>
+DATABASES = {
+    <span class="str">'default'</span>: {
+        <span class="str">'ENGINE'</span>: <span class="str">'django.db.backends.postgresql'</span>,
+        <span class="str">'NAME'</span>: os.environ.get(<span class="str">'DB_NAME'</span>),
+    }
+}
+
+<span class="cm">// docker-compose.yml</span>
+services:
+  web:
+    build: .
+    ports:
+      - <span class="str">"8000:8000"</span>
+    depends_on:
+      - db
+      - redis</code></pre>
+    </div>
+    <div class="container">
+      <div class="text-center mb-5" data-reveal="up">
+        <p class="section-tag">My Journey</p>
+        <h2 class="section-title">Work <span class="accent">Experience</span></h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item" data-reveal="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2023 — Present</span>
+            <h4 class="timeline-role">Lead Fullstack Developer</h4>
+            <p class="timeline-company">
+              <i class="bi bi-building me-1 teal-text"></i>TechSoluciones SAS — Remote (Colombia)
+            </p>
+            <p class="timeline-desc">Leading a team of 4 developers building SaaS products for US healthcare and retail clients. Architecting Django/React monorepos on AWS ECS. Introduced CI/CD pipelines reducing release time by 60%.</p>
+            <div class="timeline-tags">
+              <span class="tag">Python</span><span class="tag">Django</span>
+              <span class="tag">React</span><span class="tag">AWS</span><span class="tag">PostgreSQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2019 — 2023</span>
+            <h4 class="timeline-role">Senior Backend Developer</h4>
+            <p class="timeline-company">
+              <i class="bi bi-building me-1 teal-text"></i>Digital Ventures — Remote
+            </p>
+            <p class="timeline-desc">Developed and maintained RESTful APIs serving 50K+ daily users for fintech and e-commerce clients. Integrated Stripe and PayPal across 8 platforms. Reduced API response times by 40% through Redis caching.</p>
+            <div class="timeline-tags">
+              <span class="tag">Django REST</span><span class="tag">Node.js</span>
+              <span class="tag">Redis</span><span class="tag">Stripe</span><span class="tag">Docker</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal="left">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2016 — 2019</span>
+            <h4 class="timeline-role">Fullstack Developer</h4>
+            <p class="timeline-company">
+              <i class="bi bi-building me-1 teal-text"></i>InnovaWeb Studio — Remote
+            </p>
+            <p class="timeline-desc">Built 15+ custom websites and e-commerce platforms for local businesses. Introduced React to the team's frontend stack, improving development speed by 35%.</p>
+            <div class="timeline-tags">
+              <span class="tag">PHP</span><span class="tag">Laravel</span>
+              <span class="tag">React</span><span class="tag">MySQL</span><span class="tag">VPS</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-reveal="right">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">2013 — 2016</span>
+            <h4 class="timeline-role">Junior Web Developer</h4>
+            <p class="timeline-company">
+              <i class="bi bi-building me-1 teal-text"></i>StartupHub — On-site
+            </p>
+            <p class="timeline-desc">Built MVPs for early-stage startups. Gained strong foundations in HTML/CSS/JavaScript, responsive design, and server-side scripting with PHP and Python.</p>
+            <div class="timeline-tags">
+              <span class="tag">HTML/CSS</span><span class="tag">JavaScript</span>
+              <span class="tag">PHP</span><span class="tag">Python</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       PORTFOLIO
+  ============================================================ -->
+  <section id="portfolio" class="portfolio-section section-padding">
+    <div class="container">
+      <div class="text-center mb-5" data-reveal="up">
+        <p class="section-tag">My Work</p>
+        <h2 class="section-title">Recent <span class="accent">Projects</span></h2>
+        <p class="section-subtitle">A selection of projects delivered with care, craft, and code.</p>
+      </div>
+
+      <div class="portfolio-carousel-wrapper" data-reveal="up">
+        <div class="portfolio-track-container">
+          <div class="portfolio-track" id="portfolioTrack">
+
+            {% for project in projects %}
+            <div class="portfolio-card">
+              <div class="pcard-image">
+                <img src="{% static project.image %}" alt="{{ project.title }} — {{ project.short_desc }}" class="pcard-img">
+                <div class="pcard-overlay">
+                  <a href="{% url 'mainapp:project_detail' project.slug %}" class="pcard-view-btn">View Project <i class="bi bi-arrow-up-right ms-1"></i></a>
+                </div>
+              </div>
+              <div class="pcard-body">
+                <span class="pcard-category">{{ project.category }}</span>
+                <h5 class="pcard-title">{{ project.title }}</h5>
+                <p class="pcard-desc">{{ project.short_desc }}</p>
+              </div>
+            </div>
+            {% endfor %}
+
+          </div><!-- /track -->
+        </div>
+
+        <button class="carousel-arrow arrow-prev" id="portfolioPrev" aria-label="Previous">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="carousel-arrow arrow-next" id="portfolioNext" aria-label="Next">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="carousel-dots mt-4" id="portfolioDots"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONIALS
+  ============================================================ -->
+  <section id="testimonials" class="testimonials-section section-padding">
+    <div class="container">
+      <div class="text-center mb-5" data-reveal="up">
+        <p class="section-tag">Client Reviews</p>
+        <h2 class="section-title">What Clients <span class="accent">Say</span></h2>
+        <p class="section-subtitle">Real words from real clients who trusted us with their digital presence.</p>
+      </div>
+
+      <div class="testimonials-slider-wrapper" data-reveal="up">
+        <div class="testimonials-track-container">
+          <div class="testimonials-track" id="testimonialsTrack">
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-quote-icon"><i class="bi bi-quote"></i></div>
+                <p class="testimonial-text">"Sergio and Eder transformed our online presence completely. Our appointment bookings went up 300% within the first month of launching the new site. They delivered on time, communicated clearly, and the result was beyond what we imagined."</p>
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-avatar" style="background:linear-gradient(135deg,#0891b2,#06b6d4);">MG</div>
+                  <div class="author-info">
+                    <h6 class="author-name">Maria Gonzalez</h6>
+                    <span class="author-role">CEO — DentalSmile</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-quote-icon"><i class="bi bi-quote"></i></div>
+                <p class="testimonial-text">"Professional, fast, and results-oriented. The Sergio &amp; Eder team built our gym's landing page in under 2 weeks. The design is exactly what we wanted — bold and energetic. Our membership sign-ups doubled in the first two months."</p>
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-avatar" style="background:linear-gradient(135deg,#9f1239,#dc2626);">CH</div>
+                  <div class="author-info">
+                    <h6 class="author-name">Carlos Herrera</h6>
+                    <span class="author-role">Director — IronForge Gym</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-quote-icon"><i class="bi bi-quote"></i></div>
+                <p class="testimonial-text">"Our e-commerce sales tripled in the 3 months after launch. Sergio and Eder handled everything — design, development, payment gateway, and even trained our team. Truly a one-stop solution."</p>
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-avatar" style="background:linear-gradient(135deg,#4c1d95,#7c3aed);">LM</div>
+                  <div class="author-info">
+                    <h6 class="author-name">Laura Martinez</h6>
+                    <span class="author-role">Founder — Lumiere Botanica</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-quote-icon"><i class="bi bi-quote"></i></div>
+                <p class="testimonial-text">"Excellent technical skills and great communication throughout the project. He built our API from scratch, fully documented, and it's been running flawlessly in production for over a year. Would hire again without hesitation."</p>
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-avatar" style="background:linear-gradient(135deg,#78350f,#b45309);">AQ</div>
+                  <div class="author-info">
+                    <h6 class="author-name">Andres Quintero</h6>
+                    <span class="author-role">CTO — BrasakFire Digital</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testimonial-slide">
+              <div class="testimonial-card">
+                <div class="testimonial-quote-icon"><i class="bi bi-quote"></i></div>
+                <p class="testimonial-text">"The corporate website Sergio and Eder built has elevated our brand and positioned us as industry leaders in the digital space. Elegant, professional, and perfectly aligned with our vision. Highly recommended."</p>
+                <div class="testimonial-stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <div class="testimonial-author">
+                  <div class="author-avatar" style="background:linear-gradient(135deg,#1e3a5f,#1e40af);">PD</div>
+                  <div class="author-info">
+                    <h6 class="author-name">Patricia Diaz</h6>
+                    <span class="author-role">CEO — Altavista Constructora</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /track -->
+        </div>
+
+        <button class="carousel-arrow t-arrow-prev" id="testPrev" aria-label="Previous testimonial">
+          <i class="bi bi-chevron-left"></i>
+        </button>
+        <button class="carousel-arrow t-arrow-next" id="testNext" aria-label="Next testimonial">
+          <i class="bi bi-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="carousel-dots mt-4" id="testDots"></div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       CONTACT
+  ============================================================ -->
+  <section id="contact" class="contact-section section-padding">
+    <div class="container">
+      <div class="contact-cta-box" data-reveal="up">
+        <div class="row align-items-center">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <p class="section-tag">Ready to Start?</p>
+            <h2 class="contact-cta-title">Let's work <span class="accent">together.</span></h2>
+            <p class="contact-cta-desc">Have a project in mind? Send us a message and let's build something great. We usually respond within 24 hours.</p>
+            <div class="contact-info-items">
+              <div class="contact-info-item">
+                <i class="bi bi-telephone-fill teal-text"></i>
+                <a href="tel:+573177742241">+57 317 774 2241</a>
+              </div>
+              <div class="contact-info-item">
+                <i class="bi bi-geo-alt-fill teal-text"></i>
+                <span>Colombia (EST timezone) — Serving US clients remotely</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 text-center">
+            <a href="https://wa.me/573177742241?text=Hi%20Sergio%20%26%20Eder!%20I%20found%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project."
+               target="_blank" rel="noopener" class="btn btn-whatsapp d-block">
+              <i class="bi bi-whatsapp me-2"></i>Message on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

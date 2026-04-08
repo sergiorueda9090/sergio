@@ -1,0 +1,564 @@
+{% extends "mainapp/base.html" %}
+{% load static %}
+
+{% block title %}Custom Software Development + AI Integration | Sergio & Eder{% endblock %}
+
+{% block content %}
+
+  <!-- ============================================================
+       1. HERO
+  ============================================================ -->
+  <section class="csa-hero">
+    <div class="csa-hero-shapes" aria-hidden="true">
+      <div class="csa-shape csa-shape-1"></div>
+      <div class="csa-shape csa-shape-2"></div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <p class="csa-eyebrow">Custom Software + AI Integration</p>
+          <h1 class="csa-h1">Software built for your business — <span class="accent">with AI where it pays off.</span></h1>
+          <p class="csa-lead">
+            We design and build custom software that fits how your team actually works — internal tools,
+            dashboards, SaaS platforms, automations — and integrate AI inside it where it delivers
+            real, measurable value. Not hype. Not bolt-ons. Real systems.
+          </p>
+          <div class="csa-hero-actions mt-4">
+            <a href="https://wa.me/573177742241?text=Hi%20Sergio%20%26%20Eder!%20I%27d%20like%20to%20discuss%20a%20custom%20software%20%2B%20AI%20project."
+               target="_blank" rel="noopener" class="btn btn-primary-custom me-2 mb-2">
+              <i class="bi bi-whatsapp me-2"></i>Talk to us on WhatsApp
+            </a>
+            <a href="#csa-process" class="btn btn-outline-custom mb-2">
+              See how we work <i class="bi bi-arrow-down ms-1"></i>
+            </a>
+          </div>
+          <div class="csa-trust-strip mt-4">
+            <span><i class="bi bi-patch-check-fill"></i> 11+ years experience</span>
+            <span><i class="bi bi-boxes"></i> 30+ custom builds shipped</span>
+            <span><i class="bi bi-robot"></i> OpenAI / Claude experts</span>
+            <span><i class="bi bi-shield-lock"></i> Your data stays yours</span>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="csa-app-mockup">
+            <div class="csa-app-header">
+              <span class="frame-dot red"></span>
+              <span class="frame-dot yellow"></span>
+              <span class="frame-dot green"></span>
+              <span class="csa-app-title">app.yourbusiness.com</span>
+            </div>
+            <div class="csa-app-body">
+              <div class="csa-app-toolbar">
+                <span class="csa-app-tab active"><i class="bi bi-bar-chart-fill"></i> Dashboard</span>
+                <span class="csa-app-tab"><i class="bi bi-robot"></i> AI Copilot</span>
+              </div>
+              <div class="csa-chat">
+                <div class="csa-chat-msg user">
+                  <div class="csa-chat-bubble">Show me last quarter's underperforming SKUs.</div>
+                </div>
+                <div class="csa-chat-msg ai">
+                  <div class="csa-chat-bubble">
+                    Found <strong>4 SKUs</strong> below target in Q3:
+                    <table class="csa-chat-table">
+                      <tr><td>SKU-A100</td><td class="num">−18%</td></tr>
+                      <tr><td>SKU-B204</td><td class="num">−12%</td></tr>
+                      <tr><td>SKU-C051</td><td class="num">−9%</td></tr>
+                      <tr><td>SKU-D903</td><td class="num">−6%</td></tr>
+                    </table>
+                    <span class="csa-chat-action"><i class="bi bi-arrow-right-circle me-1"></i>Draft a re-stocking plan</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. WHAT WE BUILD
+  ============================================================ -->
+  <section class="csa-section csa-what">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">What We Build</p>
+        <h2 class="section-title">Custom software <span class="accent">that fits</span> your business.</h2>
+        <p class="section-subtitle">Six categories of software we ship in production for clients across industries.</p>
+      </div>
+
+      <div class="csa-card-grid">
+        <div class="csa-card">
+          <div class="csa-card-icon green-glow"><i class="bi bi-tools"></i></div>
+          <h4>Internal Tools</h4>
+          <p>Admin panels, ops dashboards, custom CRMs that fit how your team actually works — not how an off-the-shelf SaaS thinks they should.</p>
+          <div class="csa-card-tools">Django · React · Postgres</div>
+        </div>
+
+        <div class="csa-card">
+          <div class="csa-card-icon teal-glow"><i class="bi bi-cloud-fill"></i></div>
+          <h4>SaaS Platforms</h4>
+          <p>Multi-tenant products with auth, billing, and admin from day one. Built to scale from your first 10 users to your first 10,000.</p>
+          <div class="csa-card-tools">Django · Stripe · AWS</div>
+        </div>
+
+        <div class="csa-card">
+          <div class="csa-card-icon purple-glow"><i class="bi bi-bar-chart-fill"></i></div>
+          <h4>Dashboards & Reporting</h4>
+          <p>Live data dashboards with filters, drill-downs, exports, and scheduled email reports. Your team stops asking "where do I find this?".</p>
+          <div class="csa-card-tools">React · Recharts · Pandas</div>
+        </div>
+
+        <div class="csa-card">
+          <div class="csa-card-icon green-glow"><i class="bi bi-arrow-repeat"></i></div>
+          <h4>Workflow Automation</h4>
+          <p>Replace repetitive manual processes with reliable, auditable software. Approvals, notifications, syncs, scheduled jobs.</p>
+          <div class="csa-card-tools">Celery · Cron · Webhooks</div>
+        </div>
+
+        <div class="csa-card csa-card-highlight">
+          <div class="csa-card-icon purple-glow"><i class="bi bi-robot"></i></div>
+          <h4>AI Copilots</h4>
+          <p>AI assistants integrated <strong>inside</strong> your existing app, trained on your data, your tone, and your workflows. Not a chatbot bolted on.</p>
+          <div class="csa-card-tools">OpenAI · Claude · LangChain</div>
+        </div>
+
+        <div class="csa-card">
+          <div class="csa-card-icon teal-glow"><i class="bi bi-puzzle-fill"></i></div>
+          <h4>System Integrations</h4>
+          <p>Glue between the tools your team uses every day. Salesforce, HubSpot, Stripe, Slack, internal APIs — all talking to each other.</p>
+          <div class="csa-card-tools">REST · Webhooks · SDKs</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. AI CAPABILITIES
+  ============================================================ -->
+  <section class="csa-section csa-ai">
+    <div class="csa-ai-shapes" aria-hidden="true">
+      <div class="csa-shape csa-shape-3"></div>
+    </div>
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">AI Capabilities</p>
+        <h2 class="section-title">AI features that <span class="accent">actually work</span> in production.</h2>
+        <p class="section-subtitle">Real things AI does well today — not the hype. We build what pays off.</p>
+      </div>
+
+      <div class="csa-card-grid">
+        <div class="csa-card csa-card-ai">
+          <div class="csa-card-icon purple-glow"><i class="bi bi-chat-square-dots-fill"></i></div>
+          <h4>Conversational AI</h4>
+          <p>Chatbots and assistants powered by GPT-4 or Claude, integrated into your app, WhatsApp, Slack, or website widget.</p>
+          <div class="csa-card-tools">OpenAI · Claude · WhatsApp Business</div>
+        </div>
+
+        <div class="csa-card csa-card-ai">
+          <div class="csa-card-icon teal-glow"><i class="bi bi-file-text-fill"></i></div>
+          <h4>Document Q&A (RAG)</h4>
+          <p>Ask questions in natural language about your PDFs, contracts, manuals, or knowledge base. Answers grounded in your actual content.</p>
+          <div class="csa-card-tools">LangChain · LlamaIndex · pgvector</div>
+        </div>
+
+        <div class="csa-card csa-card-ai">
+          <div class="csa-card-icon green-glow"><i class="bi bi-tags-fill"></i></div>
+          <h4>Classification & Extraction</h4>
+          <p>Automatically tag, route, and extract structured data from emails, invoices, support tickets, contracts — at scale.</p>
+          <div class="csa-card-tools">GPT-4o · function calling · JSON schema</div>
+        </div>
+
+        <div class="csa-card csa-card-ai">
+          <div class="csa-card-icon purple-glow"><i class="bi bi-file-earmark-image-fill"></i></div>
+          <h4>OCR & Document Processing</h4>
+          <p>Read scanned documents, IDs, receipts, and forms. Turn paper into structured database rows your software can use.</p>
+          <div class="csa-card-tools">AWS Textract · GPT-4 Vision · Tesseract</div>
+        </div>
+
+        <div class="csa-card csa-card-ai">
+          <div class="csa-card-icon teal-glow"><i class="bi bi-search"></i></div>
+          <h4>Semantic Search</h4>
+          <p>Search that understands meaning, not just keywords. Embed your data once, find it however your users phrase it.</p>
+          <div class="csa-card-tools">Embeddings · pgvector · Pinecone</div>
+        </div>
+
+        <div class="csa-card csa-card-ai">
+          <div class="csa-card-icon green-glow"><i class="bi bi-cpu-fill"></i></div>
+          <h4>AI Agents</h4>
+          <p>Multi-step agents that take real actions: send emails, update records, call your APIs, escalate to a human when unsure.</p>
+          <div class="csa-card-tools">LangGraph · function calling · tool use</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. PROCESS
+  ============================================================ -->
+  <section id="csa-process" class="csa-section csa-process">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">Our Process</p>
+        <h2 class="section-title">From idea to <span class="accent">production</span> in five clear steps.</h2>
+        <p class="section-subtitle">Predictable, transparent, built around weekly demos so you always know where things stand.</p>
+      </div>
+
+      <div class="csa-process-timeline">
+        <div class="csa-step">
+          <div class="csa-step-num">1</div>
+          <h5>Discovery</h5>
+          <p>Free 30-min call. We learn your business, your data, and what's painful today.</p>
+        </div>
+        <div class="csa-step">
+          <div class="csa-step-num">2</div>
+          <h5>Prototype</h5>
+          <p>Within 1-2 weeks you see a working clickable prototype, not a slide deck.</p>
+        </div>
+        <div class="csa-step">
+          <div class="csa-step-num">3</div>
+          <h5>Build</h5>
+          <p>Iterative development with weekly Friday demos. Real progress every week.</p>
+        </div>
+        <div class="csa-step">
+          <div class="csa-step-num">4</div>
+          <h5>Train & Tune</h5>
+          <p>For AI features: we evaluate, tune, and ground the model on your real data.</p>
+        </div>
+        <div class="csa-step">
+          <div class="csa-step-num">5</div>
+          <h5>Deploy & Monitor</h5>
+          <p>CI/CD on your cloud, structured logs, alerts, full handoff documentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. TECH STACK
+  ============================================================ -->
+  <section class="csa-section csa-stack">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">Tech Stack</p>
+        <h2 class="section-title">Modern tools, <span class="accent">production-tested.</span></h2>
+        <p class="section-subtitle">We pick the boring, reliable option whenever it does the job — and we know when to reach for the bleeding edge.</p>
+      </div>
+
+      <div class="csa-stack-grid">
+        <div class="csa-stack-col">
+          <h6><i class="bi bi-server me-2 teal-text"></i>Backend</h6>
+          <div class="csa-stack-pills">
+            <span>Python</span><span>Django</span><span>FastAPI</span><span>Node.js</span><span>PostgreSQL</span><span>Redis</span>
+          </div>
+        </div>
+        <div class="csa-stack-col">
+          <h6><i class="bi bi-window-fullscreen me-2 teal-text"></i>Frontend</h6>
+          <div class="csa-stack-pills">
+            <span>React</span><span>Next.js</span><span>TypeScript</span><span>Tailwind</span><span>HTMX</span>
+          </div>
+        </div>
+        <div class="csa-stack-col">
+          <h6><i class="bi bi-robot me-2 teal-text"></i>AI / LLM</h6>
+          <div class="csa-stack-pills">
+            <span>OpenAI GPT-4o</span><span>Claude</span><span>LangChain</span><span>LlamaIndex</span><span>Embeddings</span><span>pgvector</span><span>Pinecone</span>
+          </div>
+        </div>
+        <div class="csa-stack-col">
+          <h6><i class="bi bi-cloud-arrow-up me-2 teal-text"></i>Infra</h6>
+          <div class="csa-stack-pills">
+            <span>AWS</span><span>Docker</span><span>GitHub Actions</span><span>Sentry</span><span>CloudWatch</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. USE CASES
+  ============================================================ -->
+  <section class="csa-section csa-use-cases">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">Use Cases</p>
+        <h2 class="section-title">What we've built <span class="accent">for businesses like yours.</span></h2>
+        <p class="section-subtitle">Six concrete examples of custom software + AI in the wild.</p>
+      </div>
+
+      <div class="csa-use-grid">
+        <div class="csa-use-case">
+          <div class="csa-use-icon"><i class="bi bi-graph-up-arrow"></i></div>
+          <div>
+            <h5>Sales Ops</h5>
+            <p>A custom CRM with an AI copilot that drafts follow-ups, summarizes calls, and surfaces deals at risk before reps notice.</p>
+          </div>
+        </div>
+        <div class="csa-use-case">
+          <div class="csa-use-icon"><i class="bi bi-headset"></i></div>
+          <div>
+            <h5>Customer Support</h5>
+            <p>Document Q&amp;A trained on your help center; agents get suggested replies in real time with sources cited.</p>
+          </div>
+        </div>
+        <div class="csa-use-case">
+          <div class="csa-use-icon"><i class="bi bi-receipt"></i></div>
+          <div>
+            <h5>Operations</h5>
+            <p>OCR + extraction pipeline that processes invoices and POs end-to-end. Humans only review the edge cases.</p>
+          </div>
+        </div>
+        <div class="csa-use-case">
+          <div class="csa-use-icon"><i class="bi bi-clipboard2-pulse"></i></div>
+          <div>
+            <h5>Healthcare Admin</h5>
+            <p>Intake forms that auto-extract patient info, schedule appointments, and pre-fill records — HIPAA-aware.</p>
+          </div>
+        </div>
+        <div class="csa-use-case">
+          <div class="csa-use-icon"><i class="bi bi-bag-check-fill"></i></div>
+          <div>
+            <h5>E-commerce Ops</h5>
+            <p>Auto-tagging for new products, AI-generated descriptions, returns triage, and inventory anomaly alerts.</p>
+          </div>
+        </div>
+        <div class="csa-use-case">
+          <div class="csa-use-icon"><i class="bi bi-book-half"></i></div>
+          <div>
+            <h5>Internal Knowledge</h5>
+            <p>A private "ChatGPT for your company" — answers grounded in your wiki, policies, contracts, and SOPs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. AI SAFETY & DATA PRIVACY
+  ============================================================ -->
+  <section class="csa-trust-bar">
+    <div class="container">
+      <div class="text-center mb-4">
+        <p class="section-tag">AI Safety & Data Privacy</p>
+        <h3 class="csa-trust-headline">Your data is yours. <span class="accent">We mean it.</span></h3>
+      </div>
+      <div class="csa-trust-grid">
+        <div class="csa-trust-item"><i class="bi bi-shield-fill-check"></i><span>Never used to train models</span></div>
+        <div class="csa-trust-item"><i class="bi bi-cloud-check"></i><span>Hosted in your own cloud</span></div>
+        <div class="csa-trust-item"><i class="bi bi-geo-alt-fill"></i><span>Data stays in your region</span></div>
+        <div class="csa-trust-item"><i class="bi bi-journal-text"></i><span>Audit logs on every AI call</span></div>
+        <div class="csa-trust-item"><i class="bi bi-person-lock"></i><span>Role-based access control</span></div>
+        <div class="csa-trust-item"><i class="bi bi-person-check-fill"></i><span>Human-in-the-loop for risky actions</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. BEFORE / AFTER
+  ============================================================ -->
+  <section class="csa-section csa-before-after">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">Before / After</p>
+        <h2 class="section-title">What changes when <span class="accent">AI does the boring part.</span></h2>
+        <p class="section-subtitle">Three real patterns we've shipped. No vague promises.</p>
+      </div>
+
+      <div class="csa-ba-list">
+
+        <div class="csa-ba-row">
+          <div class="csa-ba-title-wrap">
+            <span class="csa-ba-icon"><i class="bi bi-chat-left-text"></i></span>
+            <h5 class="csa-ba-title">Customer support tickets</h5>
+          </div>
+          <div class="csa-ba-cols">
+            <div class="csa-ba-col csa-ba-before">
+              <span class="csa-ba-label">Before</span>
+              <p>Avg <strong>18 min</strong> per ticket. Agents copy-paste from 4 different tools to draft one reply.</p>
+            </div>
+            <div class="csa-ba-divider"><i class="bi bi-arrow-right"></i></div>
+            <div class="csa-ba-col csa-ba-after">
+              <span class="csa-ba-label">After</span>
+              <p>AI drafts replies grounded in your help docs. Avg <strong>4 min</strong> per ticket. Same accuracy, same tone.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="csa-ba-row">
+          <div class="csa-ba-title-wrap">
+            <span class="csa-ba-icon"><i class="bi bi-receipt"></i></span>
+            <h5 class="csa-ba-title">Invoice processing</h5>
+          </div>
+          <div class="csa-ba-cols">
+            <div class="csa-ba-col csa-ba-before">
+              <span class="csa-ba-label">Before</span>
+              <p><strong>3 staff members, 2 days/week</strong> typing data from PDFs into the ERP. Errors slip through.</p>
+            </div>
+            <div class="csa-ba-divider"><i class="bi bi-arrow-right"></i></div>
+            <div class="csa-ba-col csa-ba-after">
+              <span class="csa-ba-label">After</span>
+              <p>OCR + extraction pipeline. <strong>95% auto-processed</strong>. Staff only reviews exceptions and approves.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="csa-ba-row">
+          <div class="csa-ba-title-wrap">
+            <span class="csa-ba-icon"><i class="bi bi-megaphone"></i></span>
+            <h5 class="csa-ba-title">Sales follow-ups</h5>
+          </div>
+          <div class="csa-ba-cols">
+            <div class="csa-ba-col csa-ba-before">
+              <span class="csa-ba-label">Before</span>
+              <p>Reps forget to follow up. Pipeline leaks. Manager spends Mondays chasing the team.</p>
+            </div>
+            <div class="csa-ba-divider"><i class="bi bi-arrow-right"></i></div>
+            <div class="csa-ba-col csa-ba-after">
+              <span class="csa-ba-label">After</span>
+              <p>AI copilot drafts personalized follow-ups daily. Reps review and send in <strong>1 click</strong>.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. FAQ
+  ============================================================ -->
+  <section class="csa-section csa-faq">
+    <div class="container">
+      <div class="text-center mb-5">
+        <p class="section-tag">FAQ</p>
+        <h2 class="section-title">Frequently asked <span class="accent">questions.</span></h2>
+      </div>
+
+      <div class="accordion api-accordion mx-auto" id="csaFaqAccordion">
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#csafaq1">
+              How long does a custom software project take?
+            </button>
+          </h2>
+          <div id="csafaq1" class="accordion-collapse collapse show" data-bs-parent="#csaFaqAccordion">
+            <div class="accordion-body">
+              A clickable <strong>prototype</strong> ships in <strong>1–2 weeks</strong>.
+              An <strong>MVP</strong> takes <strong>4–8 weeks</strong>.
+              Full builds with multiple modules and AI features run <strong>2–4 months</strong>.
+              After the discovery call we give you a written timeline before any commitment.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#csafaq2">
+              Will my data be used to train AI models?
+            </button>
+          </h2>
+          <div id="csafaq2" class="accordion-collapse collapse" data-bs-parent="#csaFaqAccordion">
+            <div class="accordion-body">
+              <strong>No. Ever.</strong> We use providers with explicit no-training policies (OpenAI API,
+              Anthropic API, Azure OpenAI). Your data flows through the model and back — it does not go
+              into anyone's training set. We document this in writing in every contract.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#csafaq3">
+              Where does the AI run?
+            </button>
+          </h2>
+          <div id="csafaq3" class="accordion-collapse collapse" data-bs-parent="#csaFaqAccordion">
+            <div class="accordion-body">
+              By default, in <strong>your own AWS, GCP, or Azure account</strong>. You keep the keys, you
+              keep the logs, you can revoke access at any time. For sensitive industries we can also
+              deploy fully self-hosted models (Llama, Mistral) on-prem or in your VPC.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#csafaq4">
+              What if the AI makes a mistake?
+            </button>
+          </h2>
+          <div id="csafaq4" class="accordion-collapse collapse" data-bs-parent="#csaFaqAccordion">
+            <div class="accordion-body">
+              We design for <strong>human-in-the-loop</strong> on anything that touches money, customers,
+              or legal. The AI drafts — a human approves. Every AI call is logged with input, output,
+              model version, and confidence. You can audit any decision after the fact.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#csafaq5">
+              Can you add AI features to software I already have?
+            </button>
+          </h2>
+          <div id="csafaq5" class="accordion-collapse collapse" data-bs-parent="#csaFaqAccordion">
+            <div class="accordion-body">
+              <strong>Yes — that's most of what we do.</strong> We integrate AI features <em>inside</em>
+              your existing tools (Django, Rails, Laravel, .NET, Node, even legacy PHP), not next to them.
+              No rip-and-replace required.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#csafaq6">
+              How do payments and contracts work?
+            </button>
+          </h2>
+          <div id="csafaq6" class="accordion-collapse collapse" data-bs-parent="#csaFaqAccordion">
+            <div class="accordion-body">
+              <strong>50% upfront, 50% on delivery.</strong> Payment via Stripe, Wise, or wire transfer
+              (USD or EUR). Before kickoff we sign a service contract and an NDA on request. All
+              deliverables, timelines, and acceptance criteria are written down.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       10. FINAL CTA
+  ============================================================ -->
+  <section class="csa-section csa-final-cta">
+    <div class="container">
+      <div class="csa-final-box">
+        <p class="section-tag">Ready to start?</p>
+        <h2 class="csa-final-title">Tell us what you want <span class="accent">to build.</span></h2>
+        <p class="csa-final-desc">
+          A 30-minute call is all we need to understand your needs and tell you if we're the right fit.
+          First reply in under 2 hours during EST business hours.
+        </p>
+        <div class="csa-final-actions">
+          <a href="https://wa.me/573177742241?text=Hi%20Sergio%20%26%20Eder!%20I%27d%20like%20to%20discuss%20a%20custom%20software%20%2B%20AI%20project."
+             target="_blank" rel="noopener" class="btn btn-whatsapp">
+            <i class="bi bi-whatsapp me-2"></i>Message us on WhatsApp
+          </a>
+          <a href="mailto:hello@sergioeder.dev?subject=Custom%20Software%20%2B%20AI%20Project%20Inquiry" class="btn btn-outline-custom">
+            <i class="bi bi-envelope me-2"></i>Send us an Email
+          </a>
+        </div>
+        <div class="csa-final-perks">
+          <span><i class="bi bi-check2-circle"></i> Free 30-min discovery call</span>
+          <span><i class="bi bi-check2-circle"></i> No obligations</span>
+          <span><i class="bi bi-check2-circle"></i> NDA available on request</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

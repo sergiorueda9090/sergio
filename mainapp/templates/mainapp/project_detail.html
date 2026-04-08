@@ -1,0 +1,150 @@
+{% extends "mainapp/base.html" %}
+{% load static %}
+
+{% block title %}{{ project.title }} — Case Study | Sergio & Eder{% endblock %}
+
+{% block content %}
+  <!-- ============================================================
+       PROJECT HERO
+  ============================================================ -->
+  <section class="project-hero">
+    <div class="container">
+      <a href="{% url 'mainapp:index' %}#portfolio" class="project-back">
+        <i class="bi bi-arrow-left me-2"></i>Back to Portfolio
+      </a>
+
+      <div class="row align-items-center g-5 mt-2">
+        <div class="col-lg-7">
+          <div class="project-badges mb-3">
+            <span class="project-category-badge">{{ project.category }}</span>
+            <span class="project-industry-badge">{{ project.industry }}</span>
+            <span class="project-live-badge"><span class="live-dot"></span> Live Demo</span>
+          </div>
+          <h1 class="project-title">{{ project.title }}</h1>
+          <p class="project-long-desc">{{ project.long_desc }}</p>
+          <div class="project-tech-pills">
+            {% for tech in project.tech_stack %}
+              <span class="tech-pill"><i class="bi bi-check2 me-1"></i>{{ tech }}</span>
+            {% endfor %}
+          </div>
+          <div class="project-actions mt-4">
+            <a href="{% static project.html_file %}" target="_blank" rel="noopener" class="btn btn-primary-custom me-2 mb-2">
+              <i class="bi bi-box-arrow-up-right me-2"></i>Open Live Demo
+            </a>
+            <a href="https://wa.me/573177742241?text=Hi%20Sergio%20%26%20Eder!%20I%20saw%20the%20{{ project.title|urlencode }}%20project%20and%20I%27d%20like%20something%20similar%20for%20my%20business."
+               target="_blank" rel="noopener" class="btn btn-outline-custom mb-2">
+              <i class="bi bi-whatsapp me-2"></i>Hire us for similar work
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="project-metric-card">
+            <span class="metric-label-top">Real Result</span>
+            <span class="metric-number">{{ project.highlight_metric }}</span>
+            <span class="metric-label">{{ project.highlight_label }}</span>
+            <div class="metric-divider"></div>
+            <div class="metric-meta">
+              <span><i class="bi bi-calendar3 me-1"></i>Delivered {{ project.year }}</span>
+              <span><i class="bi bi-check-circle-fill me-1"></i>Production-ready</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       LIVE DEMO IFRAME
+  ============================================================ -->
+  <section class="project-demo-section">
+    <div class="container-xl">
+      <div class="demo-frame-shell">
+        <div class="demo-frame-bar">
+          <div class="frame-dots">
+            <span class="frame-dot red"></span>
+            <span class="frame-dot yellow"></span>
+            <span class="frame-dot green"></span>
+          </div>
+          <div class="frame-url">
+            <i class="bi bi-lock-fill me-2"></i>{{ project.slug }}.sergioeder.dev
+          </div>
+          <a href="{% static project.html_file %}" target="_blank" rel="noopener" class="frame-fullscreen" title="Open in new tab">
+            <i class="bi bi-arrows-fullscreen"></i>
+          </a>
+        </div>
+        <iframe src="{% static project.html_file %}"
+                class="project-iframe"
+                title="{{ project.title }} live demo"
+                loading="lazy"></iframe>
+      </div>
+      <p class="demo-caption">
+        <i class="bi bi-info-circle me-1 teal-text"></i>
+        This is the actual live project — fully interactive. Scroll, click, fill forms, try it out.
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TRUST BAR
+  ============================================================ -->
+  <section class="project-trust-bar">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="bi bi-shield-check"></i>
+            <span class="trust-label">SSL Secured</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="bi bi-phone"></i>
+            <span class="trust-label">Mobile Optimized</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="bi bi-lightning-charge"></i>
+            <span class="trust-label">SEO-ready</span>
+          </div>
+        </div>
+        <div class="col-md-3 col-6">
+          <div class="trust-item">
+            <i class="bi bi-cloud-check"></i>
+            <span class="trust-label">AWS-deployable</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       BOTTOM CTA
+  ============================================================ -->
+  <section class="project-cta-bottom section-padding">
+    <div class="container">
+      <div class="project-cta-box">
+        <div class="row align-items-center">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <p class="section-tag">Your turn</p>
+            <h2 class="project-cta-title">Want something <span class="accent">like this</span> for your business?</h2>
+            <p class="project-cta-desc">
+              We can deliver a similar project — fully customized to your brand, content, and goals — in 2 to 4 weeks.
+              No agencies, no middlemen. Just two senior developers who ship.
+            </p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a href="https://wa.me/573177742241?text=Hi%20Sergio%20%26%20Eder!%20I%20saw%20the%20{{ project.title|urlencode }}%20project%20and%20I%27d%20like%20to%20discuss%20a%20similar%20one."
+               target="_blank" rel="noopener" class="btn btn-whatsapp d-block mb-3">
+              <i class="bi bi-whatsapp me-2"></i>Start a Conversation
+            </a>
+            <a href="{% url 'mainapp:index' %}#portfolio" class="btn btn-outline-custom d-block">
+              <i class="bi bi-grid-3x3-gap me-2"></i>View More Projects
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}
