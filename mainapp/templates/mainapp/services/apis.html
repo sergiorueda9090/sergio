@@ -1,7 +1,26 @@
 {% extends "mainapp/base.html" %}
 {% load static %}
 
-{% block title %}API Development & Integration for Businesses | Sergio & Eder{% endblock %}
+{% block title %}API Development & Integration Services for U.S. Businesses | Sergio & Eder{% endblock %}
+{% block meta_description %}Production-grade REST and GraphQL API development, third-party integrations, payment gateways and Stripe/HubSpot/Shopify connectors for U.S. businesses. Designed, built, documented, deployed.{% endblock %}
+{% block meta_keywords %}API development, REST API developer, GraphQL API, API integration services, Stripe integration, Shopify API, HubSpot integration, third-party API integration, hire API developer USA{% endblock %}
+{% block og_title %}API Development & Integration Services for U.S. Businesses{% endblock %}
+{% block og_description %}REST and GraphQL APIs, payment gateways, third-party integrations and webhooks. Designed, built, documented and deployed by a freelance fullstack duo.{% endblock %}
+{% block og_type %}service{% endblock %}
+{% block extra_jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "API Development & Integration",
+  "name": "API Development & Integration",
+  "provider": { "@id": "https://dev.sruedadev.com/#business" },
+  "areaServed": { "@type": "Country", "name": "United States" },
+  "description": "REST and GraphQL APIs, third-party integrations, payment gateways, webhooks and developer documentation for businesses.",
+  "url": "https://dev.sruedadev.com{{ request.path }}"
+}
+</script>
+{% endblock %}
 
 {% block content %}
 

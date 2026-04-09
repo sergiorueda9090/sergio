@@ -39,24 +39,31 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll(); // run on load
 
-  // Smooth scroll + close mobile menu on nav link click
+  // Smooth scroll + close mobile menu on nav link click.
+  // IMPORTANT: only call preventDefault() when we actually find a target
+  // section to scroll to. Otherwise (e.g. clicking "Home" while on a
+  // sub-page where #home doesn't exist) the click would be silently
+  // swallowed and the browser would not navigate anywhere.
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
-      if (href && href.startsWith('#')) {
-        e.preventDefault();
+      if (href && href.startsWith('#') && href.length > 1) {
         const target = document.querySelector(href);
         if (target) {
+          e.preventDefault();
           const offset = nav.offsetHeight;
           const top    = target.getBoundingClientRect().top + window.scrollY - offset;
           window.scrollTo({ top, behavior: 'smooth' });
         }
-        // Close Bootstrap mobile collapse
-        const collapse = document.getElementById('navMenu');
-        if (collapse && collapse.classList.contains('show')) {
-          const bsCollapse = bootstrap.Collapse.getInstance(collapse);
-          if (bsCollapse) bsCollapse.hide();
-        }
+        // If no target was found, fall through and let the browser
+        // navigate normally (the link is probably "/#section" rendered
+        // by the section_link template tag from a sub-page).
+      }
+      // Close Bootstrap mobile collapse on any nav-link click
+      const collapse = document.getElementById('navMenu');
+      if (collapse && collapse.classList.contains('show') && window.bootstrap) {
+        const bsCollapse = bootstrap.Collapse.getInstance(collapse);
+        if (bsCollapse) bsCollapse.hide();
       }
     });
   });

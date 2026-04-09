@@ -1,6 +1,46 @@
 {% extends "mainapp/base.html" %}
 {% load static %}
 
+{% block title %}Hire Freelance Fullstack Developers in the U.S. | Sergio Rueda & Eder Acuña{% endblock %}
+{% block meta_description %}Hire two freelance fullstack developers building high-converting websites, custom software, APIs and AI integrations for U.S. businesses. 30+ projects delivered. Free 15-min consult.{% endblock %}
+{% block og_title %}Hire Freelance Fullstack Developers in the U.S. | Sergio Rueda & Eder Acuña{% endblock %}
+{% block og_description %}Two freelance developers from Colombia building websites, custom software, APIs and AI integrations for U.S. businesses. 30+ projects delivered. Free 15-min consult.{% endblock %}
+
+{% block extra_jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you work with U.S. clients?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. We are 100% remote and most of our clients are U.S.-based businesses. We work in your time zone, communicate in English, and bill in USD."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What kind of projects do you build?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Landing pages, e-commerce stores, corporate websites, custom internal software, REST and GraphQL APIs, third-party integrations and AI features built into existing products."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can you start?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most engagements start within a week of the first call. Simple landing pages can ship in 7 days; larger custom software projects scope in 1-2 weeks."
+      }
+    }
+  ]
+}
+</script>
+{% endblock %}
+
 {% block content %}
   <!-- ============================================================
        HERO
@@ -38,7 +78,7 @@
           <div class="hero-photo-wrapper">
             <div class="photo-ring"></div>
             <div class="hero-photo-circle">
-              <img src="{% static 'mainapp/img/sergio_main.jpg' %}" alt="Sergio Rueda & Eder Acuña" class="hero-photo-img">
+              <img src="{% static 'mainapp/img/sergio_main.jpg' %}" alt="Sergio Rueda and Eder Acuña — freelance fullstack developers" class="hero-photo-img" fetchpriority="high" decoding="async">
             </div>
             <!-- Floating tech icons -->
             <div class="floating-icon fi-python">
@@ -128,7 +168,7 @@
         <div class="col-lg-5" data-reveal="left">
           <div class="about-photo-wrapper">
             <div class="about-photo-frame">
-              <img src="{% static 'mainapp/img/settup.jpg' %}" alt="Our development setup" class="about-photo-img">
+              <img src="{% static 'mainapp/img/settup.jpg' %}" alt="Our remote development setup" class="about-photo-img" loading="lazy" decoding="async">
             </div>
             <div class="about-exp-badge">
               <span class="aeb-num">11+</span>
@@ -787,7 +827,7 @@ services:
             {% for project in projects %}
             <div class="portfolio-card">
               <div class="pcard-image">
-                <img src="{% static project.image %}" alt="{{ project.title }} — {{ project.short_desc }}" class="pcard-img">
+                <img src="{% static project.image %}" alt="{{ project.title }} — {{ project.short_desc }}" class="pcard-img" loading="lazy" decoding="async">
                 <div class="pcard-overlay">
                   <a href="{% url 'mainapp:project_detail' project.slug %}" class="pcard-view-btn">View Project <i class="bi bi-arrow-up-right ms-1"></i></a>
                 </div>

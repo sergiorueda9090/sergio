@@ -1,7 +1,26 @@
 {% extends "mainapp/base.html" %}
 {% load static %}
 
-{% block title %}Custom Software Development + AI Integration | Sergio & Eder{% endblock %}
+{% block title %}Custom Software Development + AI Integration for U.S. Businesses | Sergio & Eder{% endblock %}
+{% block meta_description %}Custom software, internal tools, dashboards and SaaS platforms with AI integrated where it pays off. Built for U.S. businesses by a freelance fullstack duo. No hype, real systems.{% endblock %}
+{% block meta_keywords %}custom software development, AI integration, hire AI developer, internal tools development, SaaS development, OpenAI integration, Claude API integration, business automation, hire fullstack developer USA{% endblock %}
+{% block og_title %}Custom Software Development + AI Integration for U.S. Businesses{% endblock %}
+{% block og_description %}Custom internal tools, dashboards and SaaS platforms with AI integrated where it delivers measurable value. Built by a freelance fullstack duo.{% endblock %}
+{% block og_type %}service{% endblock %}
+{% block extra_jsonld %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Custom Software Development + AI Integration",
+  "name": "Custom Software Development + AI Integration",
+  "provider": { "@id": "https://dev.sruedadev.com/#business" },
+  "areaServed": { "@type": "Country", "name": "United States" },
+  "description": "Custom internal tools, dashboards, SaaS platforms and AI integrations built for businesses that need real, measurable software.",
+  "url": "https://dev.sruedadev.com{{ request.path }}"
+}
+</script>
+{% endblock %}
 
 {% block content %}
 

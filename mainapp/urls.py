@@ -9,4 +9,7 @@ urlpatterns = [
     path('projects/<slug:slug>/', views.project_detail, name='project_detail'),
     path('services/api-development/', views.api_services, name='api_services'),
     path('services/custom-software-ai/', views.software_ai_services, name='software_ai_services'),
+    # SEO
+    path('robots.txt', views.robots_txt, name='robots'),
+    path('sitemap.xml', views.sitemap_xml, name='sitemap'),
 ]
